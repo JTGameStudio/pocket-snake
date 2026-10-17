@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#0c081d" name="theme-color"/>
+  <title>
+   Pocket Snake — JT Game Studio
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <script defer="" src="js/translations.js">
+  </script>
+  <script defer="" src="js/game.js">
+  </script>
+  <script defer="" src="js/background.js">
+  </script>
+  <script defer="" src="js/main.js">
+  </script>
+ </head>
+ <body>
+  <main class="app" id="app">
+   <section class="device">
+    <div class="hardware">
+     <span>
+      PT–1997 / EVO
+     </span>
+     <span>
+      <span class="led">
+       ●
+      </span>
+      POWER
+     </span>
+    </div>
+    <div class="bezel">
+     <div class="screen">
+      <div class="stats">
+       <div>
+        <span data-t="score">
+        </span>
+        <b id="score">
+         000
+        </b>
+       </div>
+       <div>
+        <span data-t="best">
+        </span>
+        <b id="best">
+         000
+        </b>
+       </div>
+       <div>
+        <span data-t="level">
+        </span>
+        <b id="level">
+         01
+        </b>
+       </div>
+      </div>
+      <div class="board" id="board">
+       <canvas aria-label="Snake game" height="600" id="canvas" role="img" width="600">
+       </canvas>
+       <div class="pauseCover hidden" id="pauseCover">
+        <button class="primary" data-t="resume" id="resume">
+        </button>
+       </div>
+       <div class="hidden" id="tutorial">
+        <span aria-hidden="true" class="finger" id="finger">
+         ☝️
+        </span>
+        <div aria-hidden="true" class="tutorialDots" id="dots">
+         ●○
+        </div>
+        <button aria-label="Skip" class="skip" id="skip">
+         ×
+        </button>
+       </div>
+      </div>
+     </div>
+     <div class="caption">
+      DOT MATRIX · ARCADE SYSTEM
+     </div>
+    </div>
+    <div class="controls" id="controls">
+     <div class="dpad">
+      <button class="up" data-dir="up">
+       ▲
+      </button>
+      <button class="left" data-dir="left">
+       ◀
+      </button>
+      <div class="dot">
+       ●
+      </div>
+      <button class="rightArrow" data-dir="right">
+       ▶
+      </button>
+      <button class="down" data-dir="down">
+       ▼
+      </button>
+     </div>
+     <div class="side">
+      <button class="pill" data-t="pause" id="pause">
+      </button>
+      <button class="pill alt" id="sound">
+      </button>
+      <button class="pill menu" data-t="menu" id="menuButton">
+      </button>
+     </div>
+    </div>
+    <div aria-live="polite" class="status" id="status">
+    </div>
+   </section>
+   <footer class="footer">
+    JT GAME STUDIO
+   </footer>
+  </main>
+  <section aria-labelledby="menuTitle" aria-modal="true" class="panel" id="menu" role="dialog">
+   <div class="card">
+    <div class="eyebrow">
+     JT GAME STUDIO
+    </div>
+    <h1 id="menuTitle">
+     POCKET
+     <br/>
+     SNAKE
+    </h1>
+    <label class="field" data-t="language" for="language">
+    </label>
+    <select id="language">
+     <option value="en">
+      English
+     </option>
+     <option value="zh-Hant">
+      繁體中文
+     </option>
+     <option value="zh-Hans">
+      简体中文
+     </option>
+     <option value="fr">
+      Français
+     </option>
+     <option value="ja">
+      日本語
+     </option>
+     <option value="ko">
+      한국어
+     </option>
+     <option value="es">
+      Español
+     </option>
+     <option value="de">
+      Deutsch
+     </option>
+     <option value="pt">
+      Português
+     </option>
+     <option value="ar">
+      العربية
+     </option>
+    </select>
+    <div class="field" data-t="layout">
+    </div>
+    <div class="hands">
+     <button data-hand="left" data-t="leftHand">
+     </button>
+     <button data-hand="right" data-t="rightHand">
+     </button>
+    </div>
+    <button class="primary" data-t="play" id="play">
+    </button>
+    <button class="secondary" data-t="ranks" id="ranksButton">
+    </button>
+    <button class="secondary hidden" data-t="resume" id="continueGame">
+    </button>
+   </div>
+  </section>
+  <section aria-labelledby="rankTitle" aria-modal="true" class="panel hidden" id="ranking" role="dialog">
+   <div class="card">
+    <div class="eyebrow">
+     JT GAME STUDIO
+    </div>
+    <h2 data-t="ranks" id="rankTitle">
+    </h2>
+    <div aria-live="polite" class="summary hidden" id="summary">
+    </div>
+    <ol class="list" id="rankList">
+    </ol>
+    <p class="note" data-t="note">
+    </p>
+    <button class="primary" data-t="again" id="again">
+    </button>
+    <button class="secondary" data-t="menu" id="back">
+    </button>
+   </div>
+  </section>
+ </body>
+</html>
